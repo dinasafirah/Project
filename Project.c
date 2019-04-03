@@ -20,33 +20,41 @@ int main(){
         printf("[Menu Utama]\nPilih Mode:\n1. Tampilkan Schedule\n2. Schedule Manual\n3. Tampilkan Status Assignment Asisten\n");
         printf("4. Assign Asisten Manual\n5. Schedule Otomatis\n6. Assign Otomatis\n7. Rule Checker\n8. Simpan Proyek dan Keluar\n");
         scanf("%d", &kode);
-        switch(kode){
-        case 1:
-            //tampilkan schedule
-            break;
-        case 2:
-            //schedule manual
-            break;
-        case 3:
-            //Tampilkan Status Assignment Asisten
-            break;
-        case 4:
-            //Assign Asisten Manual
-            break;
-        case 5:
-            //Schedule Otomatis
-            break;
-        case 6:
-            //Assign Otomatis
-            break;
-        case 7:
-            //Rule Checker
-            break;
-        case 8:
-            //Keluar dan Simpan
-            break;
+        while (kode != 8){
+          while ((kode != 1) || (kode != 2) || (kode != 3) || (kode != 4) || (kode != 5) || (kode != 6) || (kode != 7)){
+             printf("Masukan salah. Masukan pilihan menu ulang);
+             printf("[Menu Utama]\nPilih Mode:\n1. Tampilkan Schedule\n2. Schedule Manual\n3. Tampilkan Status Assignment Asisten\n");
+             printf("4. Assign Asisten Manual\n5. Schedule Otomatis\n6. Assign Otomatis\n7. Rule Checker\n8. Simpan Proyek dan Keluar\n")
+             scanf("%d", &kode);
+           }
+           switch(kode){
+           case 1:
+              //tampilkan schedule
+              break;
+           case 2:
+              //schedule manual
+              break;         
+           case 3:
+              //Tampilkan Status Assignment Asisten
+              break;
+           case 4:
+              //Assign Asisten Manual
+              break;
+           case 5:
+              //Schedule Otomatis
+              break;
+           case 6:
+              //Assign Otomatis
+              break;
+           case 7:
+              //Rule Checker
+             break;
+          }
+        }  
+        if kode = 8 {
+          //Simpan dan keluar
         }
-        break;
+    break;
     case 2:
         //Load proyek dari data
 
@@ -60,21 +68,3 @@ int main(){
   }
   }
 }
-printJadwal(char **arrJadwal){
-    int i = 3;
-    int j = 0;
-    char hari[6][5] = {"Senin", "Selasa", "Rabu", "Kamis", "Jumat"}
-    printf("[Schedule Praktikum Sementara]");
-    printf("|--------------------------------------------------------------------|\n");
-    printf("|Ruang Praktikum\t|    LAB1    |    LAB2    |     LAB3   |   LSS     |\n");
-    printf("|-----------------|------------|------------|------------|-----------|\n");
-    printf("|Minggu\t|\tHari\t|------------|------------|------------|-----------|\n");
-    printf("|-----------------|------------|------------|------------|-----------|\n");
-    for (i = 3; i <= 12; i++){
-        for j = 0; j < 5; j++){
-            printf("|%d\t|\t%s\t|\t\s\t|\t\t\t|\t\t\t|\t\t\t|\n", i, *hari[j]);
-        }
-    }
-}
-
-
